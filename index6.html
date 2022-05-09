@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div></div>
+  <script>
+    const bodyValue = document.body
+    const text = bodyValue.children[0] 
+    console.log(text);
+    console.log(bodyValue.clientWidth);
+    if(bodyValue.clientWidth > 768){
+      text.textContent = "임성민"
+    }
+    else if(bodyValue.clientWidth < 450){
+      text.textContent = "손만충"
+    }else{
+      text.textContent = "장준형"
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #root>div{
+      width: 25vw;
+      height: 25vw;
+      border: 1px solid black;
+    }
+
+    #root>div:nth-child(1){
+      width: 30vw;
+      height: 30vw;
+      position:absolute;
+      top:200px;
+      left: 600px;
+    }
+
+    #root>div:nth-child(2){
+      margin-left: 20px;
+      background-color: #ccc;
+    }
+    #root>div:nth-child(3){
+      margin-left: 20px;
+      background-color: #ccc;
+    }
+    #root>div:nth-child(4){
+      margin-left: 20px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <script>
+    //1. let a = 0;
+    //변수 a는 숫자값 0이 되어있다.
+    //일정 시간이 지나면 숫자가 1씩 증가한다.
+    //2. 숫자가 10이 되면 증가하는 것이 멈춘다.
+    const root = document.getElementById('root');
+    const rootchd = root.children
+    let a = 0
+    let b = 10
+    //console.dir(rootchd);
+    let timer = setInterval(function(){
+      a++
+      console.log(a);
+      if(a===10){
+        clearInterval(timer);
+        console.log(a)
+      }
+    },1000);
+  </script>
+</body>
+</html>
